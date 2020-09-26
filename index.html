@@ -3,4 +3,5 @@ layout: default
 title: Emulator000
 ---
 
-{% include_relative README.md %}
+{% capture homepage %}{% include README.md %}{% endcapture %}
+{{ homepage | markdownify }}
