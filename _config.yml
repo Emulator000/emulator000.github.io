@@ -5,3 +5,4 @@ show_downloads: false
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 google_analytics: UA-179098698-1
+logo: /assets/img/logo.png
