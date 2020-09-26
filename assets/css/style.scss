@@ -3,12 +3,16 @@
 
 @import "{{ site.theme }}";
 
+.wrapper {
+  width: 1024px;
+}
+
 header {
-  width: 180px;
+  width: 270px;
 }
 
 section {
-  width: 620px;
+  width: 680px;
   font-size: 17px;
 
   @media print, screen and (max-width: 960px) {
@@ -21,5 +25,13 @@ section {
 
   @media print, screen and (max-width: 480px) {
     font-size: 13px;
+  }
+}
+
+.highlight, code, .language-log {
+  font-size: 12px;
+
+  @media print, screen and (max-width: 480px) {
+    font-size: 10px;
   }
 }
