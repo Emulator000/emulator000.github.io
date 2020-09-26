@@ -2,6 +2,8 @@
 
 I'm a passionate software engineer and electronic music producer. My preferred languages are Rust, C++ and PHP and I love to create smart and efficient software.
 
+Please feel free to visit [my blog](https://emulator000.github.io/blog/) too!
+
 ## AREAS OF EXPERTISE
 - Web Development
 - Bot development (Telegram, Slack, etc...)
