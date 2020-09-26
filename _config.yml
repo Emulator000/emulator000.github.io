@@ -1,8 +1,11 @@
 theme: jekyll-theme-minimal
-name: Emulator000
+name: Dario
+author: Emulator000
 title: Emulator000
 show_downloads: false
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 google_analytics: UA-179098698-1
 logo: /assets/img/logo.png
+description: Rustacean, Software & Web Developer
+job: Software Engineer @ Facile.it
