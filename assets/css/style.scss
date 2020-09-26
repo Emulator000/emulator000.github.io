@@ -9,20 +9,17 @@ header {
 
 section {
   width: 620px;
-}
+  font-size: 17px;
 
-body {
-  font-size: 16px;
-
-  @include breakpoint($medium) {
-    font-size: 18px;
+  @media print, screen and (max-width: 960px) {
+    font-size: 15px;
   }
 
-  @include breakpoint($large) {
-    font-size: 20px;
+  @media print, screen and (max-width: 720px) {
+    font-size: 14px;
   }
 
-  @include breakpoint($x-large) {
-    font-size: 22px;
+  @media print, screen and (max-width: 480px) {
+    font-size: 13px;
   }
 }
