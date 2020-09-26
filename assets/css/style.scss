@@ -10,3 +10,19 @@ header {
 section {
   width: 620px;
 }
+
+body {
+  font-size: 16px;
+
+  @include breakpoint($medium) {
+    font-size: 18px;
+  }
+
+  @include breakpoint($large) {
+    font-size: 20px;
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 22px;
+  }
+}
