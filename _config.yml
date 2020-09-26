@@ -2,7 +2,7 @@ theme: jekyll-theme-minimal
 name: Dario
 author: Dario Cancelliere
 title: Emulator000
-show_downloads: false
+show_downloads: true
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 google_analytics: UA-179098698-1
