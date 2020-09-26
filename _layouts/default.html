@@ -15,12 +15,13 @@
     <div class="wrapper">
       <header>
         <h1>{{ site.name | default: 'Dario' }}</h1>
-        <h2><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h2>
-        <h7>{{ site.job }}</h7>
 
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
+
+        <h2><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h2>
+        <h7>{{ site.job }}</h7>
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
