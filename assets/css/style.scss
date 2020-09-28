@@ -16,14 +16,17 @@ section {
   font-size: 17px;
 
   @media print, screen and (max-width: 960px) {
+    width: auto;
     font-size: 15px;
   }
 
   @media print, screen and (max-width: 720px) {
+    width: auto;
     font-size: 14px;
   }
 
   @media print, screen and (max-width: 480px) {
+    width: auto;
     font-size: 13px;
   }
 }
