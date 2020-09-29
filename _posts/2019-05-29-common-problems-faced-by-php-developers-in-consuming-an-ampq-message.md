@@ -2,7 +2,7 @@
 authors: ["emulator000"]
 date: "2019-05-29"
 share: true
-tags: [RabbitMQ, AMQP, Consumer, PHP, Rust, Go]
+tags: [rabbitmq, amqp, consumer, php, rust, go]
 title: "Common problems faced by PHP developers in consuming an AMQP message"
 layout: post
 languageCode: "en-EN"
