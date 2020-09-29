@@ -2,7 +2,7 @@
 authors: ["emulator000"]
 date: "2020-09-28"
 share: true
-tags: [Cache, Item, Rust, Generics, Async, Await, Crate, Library, Tutorial]
+tags: [cache, item, rust, generics, async, await, crate, library, tutorial]
 title: "How-to cache structs in Rust"
 layout: post
 languageCode: "en-EN"
