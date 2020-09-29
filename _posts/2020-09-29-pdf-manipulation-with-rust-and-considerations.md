@@ -33,12 +33,14 @@ Here an example of code for text replacing:
 ```rust
 use lopdf::Document;
 
-let mut document = Document::load("example.pdf")?;
-document.version = "1.4".to_string();
-
-document.replace_text(1, "Hello World!", "Modified text!");
-
-document.save("modified.pdf")?;
+fn main() {
+    let mut document = Document::load("example.pdf")?;
+    document.version = "1.4".to_string();
+    
+    document.replace_text(1, "Hello World!", "Modified text!");
+    
+    document.save("modified.pdf")?;
+}
 ```
 
 With this piece of code, the library will replace all object elements that have that string and will save it as a new file.
@@ -223,34 +225,38 @@ As said earlier, another crate that I contributed the **pdf_form** library, help
 ```rust
 use pdf_form::Form;
 
-// Load the PDF into a Form from a path
-let mut form = Form::load("path/to/pdf").unwrap();
-
-// Set the first field (you can use the "form.get_all_types()" function in order to iter all fields) text
-form.set_text(0, String::from("filling the field"));
-
-// Save the new document
-form.save("new.pdf");
+fn main() {
+    // Load the PDF into a Form from a path
+    let mut form = Form::load("path/to/pdf").unwrap();
+    
+    // Set the first field (you can use the "form.get_all_types()" function in order to iter all fields) text
+    form.set_text(0, String::from("filling the field"));
+    
+    // Save the new document
+    form.save("new.pdf");
+}
 ```
 
 At moment, all form fields are supported, such: `Text`, `Button`, `Radio`, `CheckBox`, `ListBox` and `ComboBox`.
 
 ## Insert an image
-You can add an image using the **lopdf** feature `embed_image` included in the **pdf_form** library, something like:
+You can add an image using the **lopdf** feature library called `embed_image`, something like:
 ```rust
 use lopdf::Document;
 use lopdf::xobject;
 
-let mut document = Document::load("example.pdf")?;
-document.version = "1.4".to_string();
-
-// If the stream is loaded correctly
-if let Ok(stream) = xobject::image("image.png") {
-    // we need a "page_id", the position coordinates and the size of the image
-    document.insert_image(page_id, stream, (x, y), (width, height));
+fn main() {
+    let mut document = Document::load("example.pdf")?;
+    document.version = "1.4".to_string();
+    
+    // If the stream is loaded correctly
+    if let Ok(stream) = xobject::image("image.png") {
+        // we need a "page_id", the position coordinates and the size of the image
+        document.insert_image(page_id, stream, (x, y), (width, height));
+    }
+    
+    document.save("image.pdf")?;
 }
-
-document.save("image.pdf")?;
 ```
 
 ## Considerations
