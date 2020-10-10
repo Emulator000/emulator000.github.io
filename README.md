@@ -23,6 +23,14 @@ _Facile.it | Milan, Italy | April 2017 to present_
 - Rust microservices
 - Docker and Kubernetes containerization
 
+### PHP Developer
+_Software Design Ltd | Dublin, Ireland | August 2016 to March 2017_
+- Magento CE Backend and Frontend development
+- WordPress Backend and Plugins development
+- Front-end HTML/JS/CSS developer (main: jQuery Framework, Bootstrap and Zurb Foundation), Responsive design and Parallax
+- Pure PHP development and MySQL Databases
+- RESTful web services
+
 ### Senior Web Developer
 _ebow the digital agency | Dublin, Ireland | September 2015 to August 2016_
 - Magento CE expert
