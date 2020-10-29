@@ -4,6 +4,8 @@ I'm a passionate software engineer and electronic music producer. My preferred l
 
 Please feel free to visit [my blog](https://emulator000.github.io/blog/) too!
 
+You can also download my CV in CWD format [here](download/cv.cwd). Please note that you need a [CWD Reader](https://www.compactwebdocument.com/) in order to open this file format.
+
 ## AREAS OF EXPERTISE
 - Web Development
 - Bot development (Telegram, Slack, etc...)
