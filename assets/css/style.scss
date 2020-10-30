@@ -11,6 +11,12 @@ header {
   width: 270px;
 }
 
+body.blog header {
+  @media print, screen and (max-width: 720px) {
+    display: none;
+  }
+}
+
 section {
   width: 680px;
   font-size: 17px;
