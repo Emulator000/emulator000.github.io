@@ -37,7 +37,11 @@ section {
   }
 }
 
-.highlight, code, .language-log {
+code {
+  color: #555;
+}
+
+.highlight, .language-log {
   font-size: 12px;
 
   @media print, screen and (max-width: 480px) {

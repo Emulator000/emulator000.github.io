@@ -17,7 +17,17 @@ You can also download my CV in CWD format [here](download/cv.cwd). Please note t
 
 ## PROFESSIONAL HISTORY
 ### Software Engineer
-_Facile.it | Milan, Italy | April 2017 to present_
+_Prima Assicurazioni | Milan, Italy | January 2021 to present_
+- Backend development (Rust and Elixir mainly)
+- Frontend development with Elm
+- GraphQL API with various microservices integration
+- Event sourcing and CQRS
+- Docker and Amazon ECS containerization
+- Amazon AWS integrations
+- Agile scrum methodologies
+
+### Software Engineer
+_Facile.it | Milan, Italy | April 2017 to January 2021_
 - Ownership of Web Services and backend of the Loans area
 - Symfony development with Doctrine ORM for Databases
 - Pure PHP 7.2 development and MySQL Databases
@@ -84,12 +94,16 @@ _ITIS F. Corni, Modena, Italy_
 
 ## MAIN SKILLS
 - Rust
-- PHP (Symfony, basic Laravel & CodeIgniter)
 - C/C++
+- Elixir
+- Elm
+- GraphQL
+- PHP (Symfony, Laravel & CodeIgniter)
 - Java (Android)
 - Kotlin
-- JavaScript (jQuery)
-- CSSHTML/XHTML/HTML5
+- TypeScript & JavaScript
+- CSS
+- HTML/XHTML/HTML5
 - MySQL
 - RESTful web services
 - Docker

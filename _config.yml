@@ -7,7 +7,7 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
 google_analytics: UA-179098698-1
 google_appweb: G-L0BKPJKF3N
-logo: /assets/img/logo.png
+logo: /assets/img/logo.jpg
 description: Passionate Rustacean, Senior PHP Web Developer, Android and C/C++ Developer
 job: Software Engineer @ Facile.it
 linkedin: https://www.linkedin.com/in/dario-cancelliere-5a388543/

@@ -78,27 +78,31 @@ async fn main() {
     };
 
     let user_id = 1;
-    let cached_user = data.cache.get::<User, _>(user_id).await;
+    let cached_user_result = data.cache.get::<User, _>(user_id);
 
-    if let Some(wrapped_user) = cached_user { // User found in the cache
-        if let Some(user) = wrapped_user { // User was also found in the DB, so we have the original struct
-            println!("Username of User {} is: {}", user_id, user.name);
-        } else {
-            println!("User {} not found in the DB", user_id);
-        }
-    } else { // User not found in the cache, query the DB
-        match sqlx::query_as::<_, User>("SELECT * FROM user WHERE id = {}")
-            .bind(user_id)
-            .fetch_one(&connection)
-            .await
-        {
-            Ok(user) => {
+    if let Ok(cached_user) = cached_user_result {
+        if let Some(wrapped_user) = cached_user { // User found in the cache
+            if let Some(user) = wrapped_user { // User was also found in the DB, so we have the original struct
                 println!("Username of User {} is: {}", user_id, user.name);
-            },
-            Err(_) => {
-                println!("User {} not found in the cache", user_id);
-            },
+            } else {
+                println!("User {} not found in the DB", user_id);
+            }
+        } else { // User not found in the cache, query the DB
+            match sqlx::query_as::<_, User>("SELECT * FROM user WHERE id = {}")
+                .bind(user_id)
+                .fetch_one(&connection)
+                .await
+            {
+                Ok(user) => {
+                    println!("Username of User {} is: {}", user_id, user.name);
+                },
+                Err(_) => {
+                    println!("User {} not found in the cache", user_id);
+                },
+            }
         }
+    } else {
+        println!("Something wrong happened with the cache: {:#?}", cached_user_result);
     }
 }
 ```
@@ -107,7 +111,7 @@ Imagine this code in a web service or in a high demand service, the DB will say 
 
 #### Some library explanation
 
-If you noticed, the `get()` functions returns two `Option` wrapped, something like `Option<Option<T>>` that because we want to store the `None` value of a `key` too in addition of the `None` value of a non-stored struct, if a user doesn't exist, why query the DB again and again?
+If you noticed, the `get()` function returns a `Result` (for error handling) with two `Option` inside, something like `Result<Option<Option<T>>>`, that's because we want to store the `None` value of a `key` too, in addition of the `None` value of a non-stored struct: if a user doesn't exist, why query the DB again and again?
 
 If we store the `None` value, we avoid this too and if the user will be available, we can update the user later.
 
