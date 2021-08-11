@@ -11,6 +11,6 @@ logo: /assets/img/logo.jpg
 description: Passionate Rustacean, Senior PHP Web Developer, Android and C/C++ Developer
 job: Software Engineer @ Facile.it
 linkedin: https://www.linkedin.com/in/dario-cancelliere-5a388543/
-url: "https://www.dariocancelliere.it"
+url: "https://www.dariocancelliere.it/"
 plugins:
   - jekyll-sitemap
