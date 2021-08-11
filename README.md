@@ -2,7 +2,7 @@
 
 I'm a passionate software engineer and electronic music producer. My preferred languages are Rust, C++ and PHP and I love to create smart and efficient software.
 
-Please feel free to visit [my blog](https://emulator000.github.io/blog/) too!
+Please feel free to visit [my blog](https://www.dariocancelliere.it/blog/) too!
 
 You can also download my CV in CWD format [here](download/cv.cwd). Please note that you need a [CWD Reader](https://www.compactwebdocument.com/) in order to open this file format.
 
