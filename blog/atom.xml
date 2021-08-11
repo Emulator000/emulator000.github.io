@@ -4,8 +4,8 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>HEmulator000's Blog</title>
-    <link href="http://emulator000.github.io/blog/atom.xml" rel="self"/>
-    <link href="http://emulator000.github.io/blog"/>
+    <link href="https://www.dariocancelliere.it/blog/atom.xml" rel="self"/>
+    <link href="https://www.dariocancelliere.it/blog"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://emulator000.github.io/blog</id>
     <author>
