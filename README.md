@@ -1,13 +1,15 @@
 # Hi, I'm Dario 👨‍💻🎮
 
-I'm a passionate software engineer and electronic music producer. My preferred languages are Rust, C++ and PHP and I love to create smart and efficient software.
+### Passionate Software Engineer | Algorithms and Data structures learner | Electronic Music Producer | Occasional Gamer
 
 Please feel free to visit [my blog](https://www.dariocancelliere.it/blog/) too!
 
 You can also download my CV in CWD format [here](download/cv.cwd). Please note that you need a [CWD Reader](https://www.compactwebdocument.com/) in order to open this file format.
 
 ## AREAS OF EXPERTISE
+- Backend Development
 - Web Development
+- Algorithms, data structures and performance
 - Bot development (Telegram, Slack, etc...)
 - Native applications
 - Android applications
