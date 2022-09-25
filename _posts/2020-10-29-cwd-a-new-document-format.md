@@ -9,7 +9,7 @@ languageCode: "en-EN"
 toc: true
 ---
 
-Recently, I'm working on a very ambitious project: a new document format, essentially is a PDF replacer. I created an under construction home page [here](https://www.compactwebdocument.com/).
+Recently, I'm working on a very ambitious project: a new document format, essentially is a PDF replacer. I created an under construction home page [here](https://www.compactwebdocument.com/){:target="_blank"}.
 
 CWD stands for Compact Web Document and is a new powerful and multimedia document file that allows rich contents such images, videos, audios, live maps and of course, text.
 
@@ -17,7 +17,7 @@ CWD stands for Compact Web Document and is a new powerful and multimedia documen
 
 With CWD you can easily build your own document with HTML, CSS and JavaScript and the resulting file is a high standard and compressed portable document, readable with a CWD Reader.
 
-Why do this? Adobe PDF is still here, and we don't need another document format! Well, I think that is not true, PDF have a lot of limitations, I suggest the reading of [this](https://wiki.c2.com/?PdfSucks) article, it's very complete and exhaustive.
+Why do this? Adobe PDF is still here, and we don't need another document format! Well, I think that is not true, PDF have a lot of limitations, I suggest the reading of [this](https://wiki.c2.com/?PdfSucks){:target="_blank"} article, it's very complete and exhaustive.
 
 Manipulating a PDF is the absolute pain ever, you have to read carefully the PDF reference in order to do the things in the right way and this is not always true, every PDF Reader will render in a very different and specific way and the standard is now obsolete.
 
@@ -42,7 +42,7 @@ For this project I used many technologies, main are:
 - HTML: for pages content
 - CSS: for pages styling
 
-Initially I started to write a Rust library that is used for the main CWD core, it is used by any implemented Reader and holds the system close things, then I started writing the CWD format reader and I used WebKit but, for MANY limitations I switched to [CEF](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) that uses [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)), the render engine used by Google Chrome.
+Initially I started to write a Rust library that is used for the main CWD core, it is used by any implemented Reader and holds the system close things, then I started writing the CWD format reader and I used WebKit but, for MANY limitations I switched to [CEF](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework){:target="_blank"} that uses [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)){:target="_blank"}, the render engine used by Google Chrome.
 
 ## How we can create and edit documents?
 

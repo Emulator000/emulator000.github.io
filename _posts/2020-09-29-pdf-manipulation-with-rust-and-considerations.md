@@ -14,7 +14,7 @@ The **Portable Document Format (PDF)** is a file format developed by Adobe in 19
 **Rust** is a multi-paradigm programming language focused on performance and safety, especially safe concurrency. Rust is syntactically similar to C++, and provides memory safety without using garbage collection.
 
 ## How can I manipulate PDF programmatically in Rust?
-Let's introduce [lopdf](https://crates.io/crates/lopdf) crate, a Rust library that let you to manipulate PDF file following the [reference](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) by Adobe.
+Let's introduce [lopdf](https://crates.io/crates/lopdf){:target="_blank"} crate, a Rust library that let you to manipulate PDF file following the [reference](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) by Adobe.
 
 I recently contributed to this project introducing features like:
 - Possibility to merge PDF documents in one single PDF file
@@ -22,7 +22,7 @@ I recently contributed to this project introducing features like:
 
 With this library you can basically do anything with the document elements, altering the `Root`, the `Catalog` and all other kinds of `Contents`, it's a low level library, and it's perfect for building some wrapper based on it.
 
-An example of a library built on top of **lopdf** is the [pdf_form](https://crates.io/crates/pdf_form) crate, this library in fact, let you to manipulate the `AcroForm` (the PDF form fields) easily and without struggling about discovering elements inside the page tree.
+An example of a library built on top of **lopdf** is the [pdf_form](https://crates.io/crates/pdf_form){:target="_blank"} crate, this library in fact, let you to manipulate the `AcroForm` (the PDF form fields) easily and without struggling about discovering elements inside the page tree.
 
 ## Load and modify a PDF
 The **lopdf** library loads the PDF in memory, quoting what the author says about that:

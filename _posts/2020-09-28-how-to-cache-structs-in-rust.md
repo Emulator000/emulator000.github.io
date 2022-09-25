@@ -17,7 +17,7 @@ One of the best thing that you can do when you serve non in-memory data, obvious
 
 If you use an external database provider for data, such MySQL, SQLite, Redis or whatever else, and you have to query the service in order to get data, you can get the things worse in case of multiple queries per seconds or if you need to query for the same data each time repeatedly.
 
-Supposing this piece of code using [SQLx](https://github.com/launchbadge/sqlx):
+Supposing this piece of code using [SQLx](https://github.com/launchbadge/sqlx){:target="_blank"}:
 ```rust
 struct User {
     name: String,
@@ -54,7 +54,7 @@ In Rust, you have many options to store those struct in-memory but can be very s
 
 A basic approach to this problem is using an `HashMap` that in this case is specific for the `User`, something like `HashMap<i64, User>` and you have to implement the same approach for every data type.
 
-So the problem is this, and here is where the [simple-cache](https://crates.io/crates/simple-cache) library could help. In fact, this library is an abstraction of this approach using `HashMap`s.
+So the problem is this, and here is where the [simple-cache](https://crates.io/crates/simple-cache){:target="_blank"} library could help. In fact, this library is an abstraction of this approach using `HashMap`s.
 
 Here an example of the cache `User` struct using the `CacheItem` trait implemented for the struct:
 ```rust

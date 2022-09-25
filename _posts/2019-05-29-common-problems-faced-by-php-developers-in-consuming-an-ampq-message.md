@@ -27,7 +27,7 @@ Normally, you don't notice any memory issue due to fact that the script runs for
 
 That's not a problem at all in a normal case, where the script ends and the memory is freed normally, but the case is not that obvious for a long running process like the one required by a PHP consumer. It will break, leak and, in some cases, corrupt the memory, and this will make the process crash or, more drastically, fail to run some instructions, as the opcode cache gets changed while the process is running.
 
-If you are interested in more accurate details and information, I suggest reading [this article](http://notjam.es/blog/2014/06/18/the-problems-with-long-running-php.html): it's pretty old, but explains this issue very well.
+If you are interested in more accurate details and information, I suggest reading [this article](http://notjam.es/blog/2014/06/18/the-problems-with-long-running-php.html){:target="_blank"}: it's pretty old, but explains this issue very well.
 
 ## Multiple consumers
 
@@ -43,7 +43,7 @@ We have to shutdown all consumers and sometimes we must force kill processes: th
 
 ## The network problem
 
-When we work with a network based service, we have to expect failures and we must have some reconnection policies. A common problem when we have a long running PHP process is a broken pipe (in a very popular bundle this is still an issue due to PHP nature, [see here](https://github.com/php-amqplib/RabbitMqBundle/issues/301)) because we can't use a feature that is exactly made for this sort of issues resolution, the Heartbeat. In a AMPQ server connection, normally we have to implement a sort "ping" mechanism, this is a mention of the [official RabbitMQ documentation](https://www.rabbitmq.com/heartbeats.html):
+When we work with a network based service, we have to expect failures and we must have some reconnection policies. A common problem when we have a long running PHP process is a broken pipe (in a very popular bundle this is still an issue due to PHP nature, [see here](https://github.com/php-amqplib/RabbitMqBundle/issues/301)) because we can't use a feature that is exactly made for this sort of issues resolution, the Heartbeat. In a AMPQ server connection, normally we have to implement a sort "ping" mechanism, this is a mention of the [official RabbitMQ documentation](https://www.rabbitmq.com/heartbeats.html){:target="_blank"}:
 
 > Network can fail in many ways, sometimes pretty subtle (e.g. high ratio packet loss). Disrupted TCP connections take a moderately long time (about 11 minutes with default configuration on Linux, for example) to be detected by the operating system. AMQP 0-9-1 offers a heartbeat feature to ensure that the application layer promptly finds out about disrupted connections (and also completely unresponsive peers). Heartbeats also defend against certain network equipment which may terminate "idle" TCP connections.
 
@@ -57,11 +57,11 @@ The pros of having an external consumer like this is that we haven't to care of 
 
 ## RabbitMQ cli consumer
 
-Initially we used [this consumer](https://github.com/corvus-ch/rabbitmq-cli-consumer) written in Go, it's very well documented and light enough. We still use it for some projects though.
+Initially we used [this consumer](https://github.com/corvus-ch/rabbitmq-cli-consumer){:target="_blank"} written in Go, it's very well documented and light enough. We still use it for some projects though.
 
 > This is a fork of the work done by Richard van den Brand and provides a command that aims to solve the above described problem for RabbitMQ workers by delegate the long running part to a tool written in go which is much better suited for this task. The PHP application then is only executed when there is an AMQP message to process. This is comparable to how HTTP requests usually are handled where the webs server waits for new incoming requests and calls your script once for each request. 
 
-Anyway, scaling with this consumer was a bit tedious because we have to attach more than one consumer per queue in order to run parallel processes. That could be okay for few consumers but if we have to run more than 10 consumers, this is not good for the RabbitMQ load and resource consumption as we create 10 parallel connections. Making too many connection is severely discouraged as mentioned [here](https://www.rabbitmq.com/tutorials/amqp-concepts.html#amqp-channels):
+Anyway, scaling with this consumer was a bit tedious because we have to attach more than one consumer per queue in order to run parallel processes. That could be okay for few consumers but if we have to run more than 10 consumers, this is not good for the RabbitMQ load and resource consumption as we create 10 parallel connections. Making too many connection is severely discouraged as mentioned [here](https://www.rabbitmq.com/tutorials/amqp-concepts.html#amqp-channels){:target="_blank"}:
 
 > Some applications need multiple connections to an AMQP broker. However, it is undesirable to keep many TCP connections open at the same time because doing so consumes system resources and makes it more difficult to configure firewalls. AMQP 0-9-1 connections are multiplexed with channels that can be thought of as "lightweight connections that share a single TCP connection".
 >
@@ -73,11 +73,11 @@ I decided to write something internally here in Facile.it because our need was a
 
 Another necessity was to enable or disable a certain queue remotely, for example, with a MySQL database that allows the changing of some parameters without restarting the consumer so we could just enable or disable it with a click.
 
-I could write this consumer in many languages, for example Go, Java or why not C++ but as I'm a Rust addicted, I decided to write this consumer in [Rust](https://www.rust-lang.org/en-US/).
+I could write this consumer in many languages, for example Go, Java or why not C++ but as I'm a Rust addicted, I decided to write this consumer in [Rust](https://www.rust-lang.org/en-US/){:target="_blank"}.
 
-Our RabbitMQ consumer is open-source and you can compile it for any OS compatible with Rust. You can find it on GitHub: https://github.com/facile-it/rabbitmq-consumer
+Our RabbitMQ consumer is open-source and you can compile it for any OS compatible with Rust. You can find it on GitHub: [https://github.com/facile-it/rabbitmq-consumer](https://github.com/facile-it/rabbitmq-consumer){:target="_blank"}
 
-If you want a ready to use binary, just go in [Releases](https://github.com/facile-it/rabbitmq-consumer/releases) and download a pre-compiled binary.
+If you want a ready to use binary, just go in [Releases](https://github.com/facile-it/rabbitmq-consumer/releases){:target="_blank"} and download a pre-compiled binary.
 
 ### Why Rust
 
@@ -99,7 +99,7 @@ Main features are:
 
 Isn't this something that we would like to found in a RabbitMQ consumer? In fact, I looked for reliability, stability and memory safety first.
 
-When I was looking for a good AMQP protocol integration library, I discovered [Lapin](https://github.com/sozu-proxy/lapin) that uses the asynchronous interface thanks to [Tokio](https://github.com/tokio-rs/tokio) and [Futures](https://github.com/rust-lang-nursery/futures-rs).
+When I was looking for a good AMQP protocol integration library, I discovered [Lapin](https://github.com/sozu-proxy/lapin){:target="_blank"} that uses the asynchronous interface thanks to [Tokio](https://github.com/tokio-rs/tokio){:target="_blank"} and [Futures](https://github.com/rust-lang-nursery/futures-rs){:target="_blank"}.
 
 ### Using the consumer
 
@@ -164,7 +164,7 @@ db_name = ""
 retries = 3
 ```
 
-The configuration is well explained in the [config.toml](https://github.com/facile-it/rabbitmq-consumer#configtoml) section of the repository, anyway this configuration provides one queue with the MySQL connection disabled.
+The configuration is well explained in the [config.toml](https://github.com/facile-it/rabbitmq-consumer#configtoml){:target="_blank"} section of the repository, anyway this configuration provides one queue with the MySQL connection disabled.
 
 For each received messages, the consumer will execute `php ../bin/console message:processor` command and sends the content as parameters, for example, if the received message is `--option 1`, the full executed command will be:
 ```bash
@@ -177,7 +177,7 @@ Using a relative path anyway is a bit discouraged, it's always better to put an 
 
 All the message content is parsed as arguments for our command, don't worry, this will can't execute any malicious command because every parameter is splitted automatically by a space and can't be an executed (like `| grep` or other commands).
 
-You can find some details on how configure the consumer properly in the repository README, precisely in [this section](https://github.com/facile-it/rabbitmq-consumer#configuration).
+You can find some details on how configure the consumer properly in the repository README, precisely in [this section](https://github.com/facile-it/rabbitmq-consumer#configuration){:target="_blank"}.
 
 ### Queues in a MySQL database
 
@@ -193,7 +193,7 @@ db_name = "example"
 retries = 3
 ```
 
-This configuration will allow the consumer to fetch a `queues` table directly from the database, you can find the needed DDL [here](https://github.com/facile-it/rabbitmq-consumer#queues-and-consumers).
+This configuration will allow the consumer to fetch a `queues` table directly from the database, you can find the needed DDL [here](https://github.com/facile-it/rabbitmq-consumer#queues-and-consumers){:target="_blank"}.
 
 The `retries` parameter defines the number of retry when the MySQL connection is lost, if all `3` retries fails, the process ends and you will have to restart it manually.
 
@@ -293,10 +293,10 @@ As you can see, there isn't a perfect solution for this problem or anyway I didn
 
 # References
 
-* [Consuming AMQP messages in PHP](https://medium.com/@sergey.kolodyazhnyy/consuming-amqp-messages-in-php-6650c06936fa)
-* [The problems with long running PHP scripts](http://notjam.es/blog/2014/06/18/the-problems-with-long-running-php.html)
-* [Client Documentation](https://www.rabbitmq.com/clients.html)
-* [13 common RabbitMQ mistakes](https://www.cloudamqp.com/blog/2018-01-19-part4-rabbitmq-13-common-errors.html)
-* [PHP Meminfo and Memory Leaks](https://alanstorm.com/php-meminfo-and-memory-leaks/)
+* [Consuming AMQP messages in PHP](https://medium.com/@sergey.kolodyazhnyy/consuming-amqp-messages-in-php-6650c06936fa){:target="_blank"}
+* [The problems with long-running PHP scripts](http://notjam.es/blog/2014/06/18/the-problems-with-long-running-php.html){:target="_blank"}
+* [Client Documentation](https://www.rabbitmq.com/clients.html){:target="_blank"}
+* [13 common RabbitMQ mistakes](https://www.cloudamqp.com/blog/2018-01-19-part4-rabbitmq-13-common-errors.html){:target="_blank"}
+* [PHP Meminfo and Memory Leaks](https://alanstorm.com/php-meminfo-and-memory-leaks/){:target="_blank"}
 
-Via [Facile.it Engineering blog](https://engineering.facile.it/blog/eng/common-problems-faced-by-php-developers-in-consuming-an-ampq-message/)
+Via [Facile.it Engineering blog](https://engineering.facile.it/blog/eng/common-problems-faced-by-php-developers-in-consuming-an-ampq-message/){:target="_blank"}
