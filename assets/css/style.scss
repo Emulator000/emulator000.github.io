@@ -17,6 +17,10 @@ body.blog header {
   }
 }
 
+a:hover, a:focus {
+    font-weight: normal;
+}
+
 section {
   width: 680px;
   font-size: 17px;
