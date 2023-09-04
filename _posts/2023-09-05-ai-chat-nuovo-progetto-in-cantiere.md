@@ -1,6 +1,6 @@
 ---
 authors: ["emulator000"]
-date: "2023-09-05"
+date: "2023-09-04"
 share: true
 tags: [ai, chatbot, business, rust, openai, chatgpt]
 title: "AI Chat: Nuovo progetto in cantiere"
