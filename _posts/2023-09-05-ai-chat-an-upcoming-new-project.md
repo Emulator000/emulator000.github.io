@@ -26,7 +26,7 @@ communicate with clients in a natural and effective way.
 
 One of the coolest things about AI Chat is its ability to create AI assistants that are truly in tune and shapes with
 your company's data. You can feed and fine-tune it with various types of information – from PDFs and Excel sheets to
-website content (thanks to the brand new Rust's crate crawly) and more – and watch it transform into a knowledgeable
+website content (thanks to the brand new Rust's crate [crawly](https://github.com/CrystalSoft/crawly)) and more – and watch it transform into a knowledgeable
 assistant that speaks your company language. And here's the best part: you're in control. You can update its knowledge
 whenever you want or even wipe the slate clean.
 
@@ -52,12 +52,14 @@ on bot management. You can also customize the role and permission of every singl
 
 Curious about the tech that powers AI Chat? Here's a an high-level summarization:
 
-- Frontend: The frontend is built using React, Next.js, and Material-UI, providing a modern and intuitive user interface.
-- Backend: The backend is made in Rust, using Tonic, Serde, Diesel, and Tokio and many other libraries.
-- Database: PostgreSQL handles the heavy lifting, managing bot configurations and user information.
-- Internal services communication: Redpanda enables smooth event handling and communication between services.
+- **Frontend**: The frontend is built using React, Next.js, and Material-UI, providing a modern and intuitive user interface.
+- **Backend**: The backend is made in Rust, using Tonic, Serde, Diesel, and Tokio and many other libraries.
+- **Database**: PostgreSQL handles the heavy lifting, managing bot configurations and user information.
+- **Internal services communication**: Redpanda enables smooth event handling and communication between services.
 
 ## Stay tuned
 
 AI Chat is on the horizon, and I can't wait to share more details with you.
-Keep an eye on the official LinkedIn and GitHub profile for updates. Feel free to reach me out and share your thoughts!
+
+Keep an eye on the official [LinkedIn](https://www.linkedin.com/company/99948946/admin/feed/posts/) and
+[GitHub](https://github.com/aichat-bot) profile for updates. Feel free to reach me out and share your thoughts!
