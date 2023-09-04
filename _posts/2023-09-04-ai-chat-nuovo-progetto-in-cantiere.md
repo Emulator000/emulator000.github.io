@@ -14,7 +14,7 @@ e che da ormai qualche tempo sto sviluppando.
 
 ## Cos'è AI Chat?
 
-AI Chat sarà in grado di portare il potere dell'intelligenza artificiale nelle mani alle aziende in modo semplice, 
+AI Chat sarà in grado di portare il potere dell'intelligenza artificiale nelle mani delle aziende in modo semplice, 
 aiutandole a migliorare le interazioni con i clienti, ottimizzare i processi e incrementarne l'engagement.
 
 Non si tratta quindi dell'ennesimo chat bot; è un vero e proprio assistente virtuale basato su intelligenza artificiale,
