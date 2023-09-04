@@ -10,6 +10,7 @@ You can also download my CV in CWD format [here](download/cv.cwd). Please note t
 - Backend Development
 - Web Development
 - Algorithms, data structures and performance
+- Artificial Intelligence
 - Bot development (Telegram, Slack, etc...)
 - Native applications
 - Android applications
@@ -19,7 +20,17 @@ You can also download my CV in CWD format [here](download/cv.cwd). Please note t
 
 ## PROFESSIONAL HISTORY
 ### Software Engineer
-_Prima Assicurazioni | Milan, Italy | January 2021 to present_
+_Exein | Rome, Italy | April 2023 to present_
+- Backend development with Rust mainly and C
+- eBPF with Linux Kernel
+- Protobuf services m2m integration with gRPC and/or HTTP
+- HTTP RESTful API design and development
+- TLS and mTLS services
+- Docker and Amazon ECS containerization
+- Amazon AWS integrations
+
+### Software Engineer
+_Prima Assicurazioni | Milan, Italy | January 2021 to April 2023_
 - Backend development (Rust and Elixir mainly)
 - Frontend development with Elm
 - GraphQL API with various microservices integration
